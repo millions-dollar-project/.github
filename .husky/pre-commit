@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+set -e
+echo "pre-commit: link check"
+node scripts/check-links.mjs
+echo "pre-commit: secret scan"
+exec bash scripts/secret-scan.sh
